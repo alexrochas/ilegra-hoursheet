@@ -17,8 +17,7 @@ parser.add_argument('-S', '--subProject', help='sub-project id', default=config.
 parser.add_argument('-T', '--type', help='activity type id', default=config.get("tipoAtividade"))
 args = parser.parse_args()
 
-# with Browser("phantomjs") as browser:
-with Browser('chrome') as browser:
+with Browser("phantomjs") as browser:
     # Visit URL
     url = "http://sistemas2.ilegra.com/lancamentohoras/login.faces"
     browser.visit(url)
