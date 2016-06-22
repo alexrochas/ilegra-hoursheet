@@ -32,13 +32,6 @@ with Browser("phantomjs") as browser:
     browser.visit(url)
     browser.find_by_name("form:lancarAtividade").click()
     browser.is_element_visible_by_css(".savePanelCDiv")
-    # Remove read only from date field
-    browser.execute_script("document.getElementsByName('novaPanelForm:dataInputDate')[0].readOnly = false")
-
-    browser.fill("novaPanelForm:dataInputDate", args.date)
-    browser.fill("novaPanelForm:strDataHoraInicio", args.start.replace(':', ''))
-    browser.fill("novaPanelForm:strDataHoraFim", args.finish.replace(':', ''))
-    browser.find_by_id("novaPanelForm:projeto").first.select(config.get("projeto"))
     projects = [o for o in browser.find_by_id("novaPanelForm:projeto").first.find_by_css("option")]
     print("PROJECT \tVALUE")
     [print(o.text.strip() + "\t" + o.value.strip()) for o in projects]
