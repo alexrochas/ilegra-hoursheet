@@ -38,16 +38,16 @@ with Browser("phantomjs") as browser:
     browser.fill("novaPanelForm:dataInputDate", args.date)
     browser.fill("novaPanelForm:strDataHoraInicio", args.start.replace(':', ''))
     browser.fill("novaPanelForm:strDataHoraFim", args.finish.replace(':', ''))
-    browser.find_by_id("novaPanelForm:projeto").first.select(config.get("projeto"))
+    browser.find_by_id("novaPanelForm:projeto").first.select(args.project)
     time.sleep(2)
-    browser.find_by_id("novaPanelForm:subProjeto").first.select(config.get("subProjeto"))
+    browser.find_by_id("novaPanelForm:subProjeto").first.select(args.subProject)
     time.sleep(2)
-    browser.find_by_id("novaPanelForm:tipoAtividade").first.select(config.get("tipoAtividade"))
+    browser.find_by_id("novaPanelForm:tipoAtividade").first.select(args.type)
     time.sleep(2)
     browser.fill("novaPanelForm:descricao", args.description)
-    if input("Everything work until this point.\r\n"
+    if str.lower(input("Everything work until this point.\r\n"
                      + str(args) + "\r\n"
-                     + "Push change?[Y/N] ") == "Y":
+                     + "Push change?[Y/N] ")) == "y":
         browser.find_by_name("novaPanelForm:salvar").click()
         if browser.is_text_present('Atividade lanÃ§ada com sucesso!'):
             print("Done.")
