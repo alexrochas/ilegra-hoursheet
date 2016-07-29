@@ -32,7 +32,7 @@ with Browser("phantomjs") as browser:
     browser.visit(url)
     browser.find_by_name("form:lancarAtividade").click()
     browser.is_element_visible_by_css(".savePanelCDiv")
-    browser.find_by_id("novaPanelForm:projeto").first.select(config.get("projeto"))
+    browser.find_by_id("novaPanelForm:projeto").first.select(args.project)
     time.sleep(2)
     projects = [o for o in browser.find_by_id("novaPanelForm:subProjeto").first.find_by_css("option")]
     print("SUB-PROJECT \tVALUE")
