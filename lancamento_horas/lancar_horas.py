@@ -29,7 +29,7 @@ def lancar(args):
         browser.find_by_id("novaPanelForm:tipoAtividade").first.select(args.type)
         time.sleep(2)
         browser.fill("novaPanelForm:descricao", args.description)
-        if str.lower(input("Everything work until this point.\r\n"
+        if (args.yes == 'y') | str.lower(input("Everything work until this point.\r\n"
                                    + str(args) + "\r\n"
                                    + "Push change?[Y/N] ")) == "y":
             browser.find_by_name("novaPanelForm:salvar").click()
