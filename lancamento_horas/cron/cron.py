@@ -31,7 +31,7 @@ def run_cron():
     args = console.parse_args()
     args.user = config.get('usuario')
     args.password = config.get('senha')
-    args.yes = 'n'
+    args.yes = 'y'
     args.start, args.finish = morning_args()
     args.project = 1981
     args.subProject = 'SELECIONE...'
