@@ -34,6 +34,7 @@ def parse_args():
     lancar_parser.add_argument('-P', '--project', help='project id', default=config.get("projeto"))
     lancar_parser.add_argument('-S', '--subProject', help='sub-project id', default=config.get("subProjeto"))
     lancar_parser.add_argument('-T', '--type', help='activity type id', default=config.get("tipoAtividade"))
+    lancar_parser.add_argument('-y', '--yes', help='not ask for continue', default='n')
 
     # listar projeto
     projeto_parser = subparser.add_parser('projetos')
