@@ -76,7 +76,7 @@ optional arguments:
 
 * Lembrando que se você criou o arquivo **perfil.conf** muitos desses dados já serão adicionados sem a necessidade de você seta-los.
 
-#### Dimed
+### Dimed
 
 Comando para gerar uma tabela do total de horas dia-a-dia do mês. (necessário para lançar no tracegp da Dimed)
 
