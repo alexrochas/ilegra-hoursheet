@@ -110,6 +110,7 @@ E essencialmente o que ele faz é gerar uma cron e escrever na sua crontab de us
 
 ### Roadmap
 
+- Alterar CLI para usar [Python Nubia](https://github.com/facebookincubator/python-nubia)
 - Monday Cronjob :thumbsup:  
   Hoje existe o rascunho de um algoritmo de cron que roda todo sábado e verifica se você lançou o horário da segunda. (aquele problema de esquecer de lançar as horas sabe?)
 - Daily Cronjob  
